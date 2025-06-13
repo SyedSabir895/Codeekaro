@@ -46,8 +46,10 @@ function Navbar() {
           <div className="hidden md:flex space-x-2 ml-auto">
             <Link to="/" className="hover:text-gray-200 text-2xl px-6 py-4">Home</Link>
             <Link to="/courses" className="hover:text-gray-200 text-2xl px-6 py-4">Courses</Link>
-            <Link to="/about" className="hover:text-gray-200 text-2xl px-6 py-4">About Us</Link>
             <Link to="/blog" className="hover:text-gray-200 text-2xl px-6 py-4">Blog</Link>
+           <Link to="/about" className="hover:text-gray-200 text-2xl px-6 py-4">About Us</Link>
+           <Link to="/games" className="hover:text-gray-200 text-2xl px-6 py-4">Games</Link>
+           
 
           </div>
 

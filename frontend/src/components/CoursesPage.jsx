@@ -192,7 +192,7 @@ function CoursesPage() {
             <video
               width="1600"
               controls
-              src="src/assets/Recording 2025-01-30 183152.mp4"
+              src="src/assets/Screen Recording 2025-01-30 183011.mp4"
               type="video/mp4"
               className="rounded-lg shadow-lg"
               onEnded={handleVideoEnd}

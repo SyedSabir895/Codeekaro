@@ -8,6 +8,7 @@ import DashBoard from "./components/DashBoard";
 import AboutUs from "./components/About";
 import Compiler from "./components/Compiler";
 import Blog from "./components/Blog";
+import Games from "./components/Games";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
           <Route path="/about" element={<AboutUs/>}/>
           <Route path="/compiler" element={<Compiler/>}/>
           <Route path="/blog" element={<Blog/>}/>
+          <Route path="/games" element={<Games/>}/>
 
         </Routes>
       </div>
