@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const userRoutes = require("./routes/userRoutes");
+const helmet = require('helmet');
 
 const app = express();
 
@@ -11,6 +12,16 @@ const app = express();
 app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 app.use(express.json()); // Preferred over bodyParser.json()
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", "blob:"],
+      objectSrc: ["'none'"],
+      connectSrc: ["'self'", "blob:"],
+    },
+  },
+}));
 
 // Routes
 app.use("/api/auth", userRoutes);
